@@ -15,4 +15,8 @@ app.get("/", (req, res) => {
   res.send("Vanessa's Budgeting App - ROOT");
 });
 
+app.get("*", (req, res) => {
+  res.status(404).send("Page not found")
+})
+
 module.exports = app;
